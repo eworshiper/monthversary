@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Monthversary</title>
+  </head>
+  <body>
+    <!-- Section: Design Block -->
+    <section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+        <div class="container">
+        <div class="row gx-lg-5 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="my-5 display-3 fw-bold ls-tight">
+                Login dulu ya sayaang <br />
+            </h1>
+            <p style="color: hsl(217, 10%, 50.8%)">
+                Biar tau username sama passwordnya bisa akses link ini yaa hehehe
+            </p>
+            </div>
+
+            <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+                <div class="card-body py-5 px-md-5">
+                <form id="login-form">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                    <input type="text" name="username" id="username-field" class="form-control" />
+                    <label class="form-label" for="username-field">Usrename</label>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                    <input type="password" name="password" id="password-field" class="form-control" />
+                    <label class="form-label" for="password-field">Password</label>
+                    </div>
+
+                    <!-- Submit button -->
+                    <input type="submit" value="Login" id="login-form-submit">
+
+                </form>
+                <script>
+                    const loginForm = document.getElementById("login-form");
+                    const loginButton = document.getElementById("login-form-submit");
+                    const loginErrorMsg = document.getElementById("login-error-msg");
+
+                    loginButton.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const username = loginForm.username.value;
+                    const password = loginForm.password.value;
+
+                    if (username === "yourfuturewife" && password === "aylafyuubibi") {
+                        alert("You have successfully logged in.");
+                        window.location.href="monthversary.html";
+                    } else {
+                        loginErrorMsg.style.opacity = 1;
+                    }
+                    })
+                </script>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Jumbotron -->
+    </section>
+    <!-- Section: Design Block -->
+
+  </body>
+</html>
